@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PMovement : MonoBehaviour
+public class PMovement : Photon.Pun.MonoBehaviourPun
 {
     public Rigidbody rb;
     public float forwardForce = 5000f;
@@ -26,7 +26,7 @@ public class PMovement : MonoBehaviour
       //  stopD = Physics.Raycast(transform.position, Vector3.back, .67f);
 
      //   if (!stopT)
-
+if(photonView.IsMine) {
          if (Input.GetKey(KeyCode.UpArrow))
          {
             rb.AddForce(0, 0, forwardForce);
@@ -50,6 +50,9 @@ public class PMovement : MonoBehaviour
             rb.AddForce(0, 0, -forwardForce);
 
           }
+
+
+        }
 
     }
 }
