@@ -6,3 +6,4 @@
 - Player-ul este facut de mine in blender
 - Maze-ul este de pe TurboSquid
 - Imaginea pentru puzzle este de pe google
+- toate fisierele jocului sunt disponibile aici: https://github.com/dirgnic/amigos/tree/full-game/amigosProj
