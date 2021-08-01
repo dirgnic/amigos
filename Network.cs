@@ -8,17 +8,16 @@ using Cinemachine;
 
 public class Network : MonoBehaviourPunCallbacks
 {
-    public CinemachineFreeLook freeLook;
-    GameObject camObj;
-    CinemachineComposer comp;
+  //  public CinemachineFreeLook freeLook;
+  //  GameObject camObj;
+  //  CinemachineComposer comp;
+    public  FollowPlayer cam;
     // Start is called before the first frame update
     private void Start()
     {
-      camObj = GameObject.FindWithTag("MainCamera");
+//      camObj = GameObject.FindWithTag("MainCamera");
 
-      freeLook = camObj.GetComponent<CinemachineFreeLook>();
-
-      comp = freeLook.GetRig(1).GetCinemachineComponent<CinemachineComposer>();
+  //    freeLook = camObj.GetComponent<CinemachineFreeLook>();
 
 
         Debug.Log("Connecting");
@@ -35,9 +34,12 @@ public class Network : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
       Debug.Log("Connected");
-
-      comp.m_TrackedObjectOffset.y = PhotonNetwork.Instantiate("Player", new Vector3(
-        23049, 200, Random.Range(-7318, 17494)), Quaternion.identity);
+      //  comp.TrackedObject
+      Vector3 position = new Vector3(
+         23049, 200, Random.Range(-7318, 17494));
+    //PhotonNetwork.Instantiate("Player", position, Quaternion.identity).transform;
+    // freeLook.Follow =
+     cam.target = PhotonNetwork.Instantiate("Player", position, Quaternion.identity).transform;
     }
 
 }
