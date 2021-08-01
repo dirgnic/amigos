@@ -7,3 +7,5 @@
 - Maze-ul este de pe TurboSquid
 - Imaginea pentru puzzle este de pe google
 - toate fisierele jocului sunt disponibile aici: https://github.com/dirgnic/amigos/tree/full-game/amigosProj
+![alt text](https://github.com/dirgnic/amigos/blob/main/Untitled3.png)
+![alt text](https://github.com/dirgnic/amigos/blob/main/Untitled5.png)
