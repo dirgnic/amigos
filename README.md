@@ -5,3 +5,4 @@
 - Pentru partea de first-person si camera-movement (in 360) am folosit libraria Cinemachine
 - Player-ul este facut de mine in blender
 - Maze-ul este de pe TurboSquid
+- Imaginea pentru puzzle este de pe google
